@@ -8,7 +8,7 @@ export default function App() {
   const [category, setCategory]=useState("General")
   const[news,setNews]=useState([])
   const getData=async()=>{
-    const res=await fetch(`https://newsapi.org/v2/top-headlines?category=${category}&language=en&apiKey=${process.env.API_KEY`);
+    const res=await fetch(`https://newsapi.org/v2/top-headlines?category=${category}&language=en&apiKey=${process.env.API_KEY}`);
     const data=await res.json();
     const datas=await data.articles;
   console.log(datas);
